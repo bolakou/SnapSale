@@ -38,7 +38,7 @@
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
     [toolbar setItems:[NSArray arrayWithObjects:flexableItem,doneItem, nil]];
     self.priceField.inputAccessoryView = toolbar;
-    // TODO: text config 
+    // TODO: text config
 }
 
 - (void)doneButtonDidPressed:(id)sender {

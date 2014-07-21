@@ -13,14 +13,12 @@
 		2F1D12DB196A6EF00028187B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F1D12D9196A6EF00028187B /* InfoPlist.strings */; };
 		2F1D12DD196A6EF00028187B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1D12DC196A6EF00028187B /* main.m */; };
 		2F1D12E1196A6EF00028187B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1D12E0196A6EF00028187B /* AppDelegate.m */; };
-		2F1D12EA196A6EF00028187B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1D12E9196A6EF00028187B /* SecondViewController.m */; };
 		2F1D12EC196A6EF00028187B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1D12EB196A6EF00028187B /* Images.xcassets */; };
 		2F1D12F3196A6EF00028187B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D12F2196A6EF00028187B /* XCTest.framework */; };
 		2F1D12F4196A6EF00028187B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D12D0196A6EF00028187B /* Foundation.framework */; };
 		2F1D12F5196A6EF00028187B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D12D4196A6EF00028187B /* UIKit.framework */; };
 		2F1D12FD196A6EF00028187B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F1D12FB196A6EF00028187B /* InfoPlist.strings */; };
 		2F1D12FF196A6EF00028187B /* SnapSaleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1D12FE196A6EF00028187B /* SnapSaleTests.m */; };
-		2F1D130C196A71440028187B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D130B196A71440028187B /* Parse.framework */; };
 		2F1D1316196A720C0028187B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D130D196A720C0028187B /* AudioToolbox.framework */; };
 		2F1D1317196A720C0028187B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D130E196A720C0028187B /* CFNetwork.framework */; };
 		2F1D1318196A720C0028187B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D130F196A720C0028187B /* CoreLocation.framework */; };
@@ -37,6 +35,10 @@
 		2FB3ABFB19724CF600420CE1 /* p2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB3ABF719724CF600420CE1 /* p2.png */; };
 		2FB3ABFC19724CF600420CE1 /* p1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB3ABF819724CF600420CE1 /* p1.jpg */; };
 		2FB3ABFD19724CF600420CE1 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB3ABF919724CF600420CE1 /* avatar.png */; };
+		55646B24197CC3DD0029E3CF /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55646B1F197CC3DD0029E3CF /* FormViewController.m */; };
+		55646B25197CC3DD0029E3CF /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55646B21197CC3DD0029E3CF /* CameraViewController.m */; };
+		55646B26197CC3DD0029E3CF /* SubmitSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55646B23197CC3DD0029E3CF /* SubmitSuccessViewController.m */; };
+		55646B2A197CC53C0029E3CF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55646B29197CC53C0029E3CF /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,15 +62,12 @@
 		2F1D12DE196A6EF00028187B /* SnapSale-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapSale-Prefix.pch"; sourceTree = "<group>"; };
 		2F1D12DF196A6EF00028187B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2F1D12E0196A6EF00028187B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2F1D12E8196A6EF00028187B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		2F1D12E9196A6EF00028187B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		2F1D12EB196A6EF00028187B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F1D12F1196A6EF00028187B /* SnapSaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapSaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F1D12F2196A6EF00028187B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2F1D12FA196A6EF00028187B /* SnapSaleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnapSaleTests-Info.plist"; sourceTree = "<group>"; };
 		2F1D12FC196A6EF00028187B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F1D12FE196A6EF00028187B /* SnapSaleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapSaleTests.m; sourceTree = "<group>"; };
-		2F1D130B196A71440028187B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		2F1D130D196A720C0028187B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2F1D130E196A720C0028187B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2F1D130F196A720C0028187B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -87,6 +86,13 @@
 		2FB3ABF719724CF600420CE1 /* p2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p2.png; sourceTree = "<group>"; };
 		2FB3ABF819724CF600420CE1 /* p1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p1.jpg; sourceTree = "<group>"; };
 		2FB3ABF919724CF600420CE1 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		55646B1E197CC3DD0029E3CF /* FormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
+		55646B1F197CC3DD0029E3CF /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
+		55646B20197CC3DD0029E3CF /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		55646B21197CC3DD0029E3CF /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		55646B22197CC3DD0029E3CF /* SubmitSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitSuccessViewController.h; sourceTree = "<group>"; };
+		55646B23197CC3DD0029E3CF /* SubmitSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitSuccessViewController.m; sourceTree = "<group>"; };
+		55646B29197CC53C0029E3CF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +106,12 @@
 				2F1D1319196A720C0028187B /* libz.dylib in Frameworks */,
 				2F1D131A196A720C0028187B /* MobileCoreServices.framework in Frameworks */,
 				2F1D131B196A720C0028187B /* QuartzCore.framework in Frameworks */,
+				55646B2A197CC53C0029E3CF /* Parse.framework in Frameworks */,
 				2F1D131C196A720C0028187B /* Security.framework in Frameworks */,
 				2F1D131D196A720C0028187B /* StoreKit.framework in Frameworks */,
 				2F1D131E196A720C0028187B /* SystemConfiguration.framework in Frameworks */,
 				2F1D12D3196A6EF00028187B /* CoreGraphics.framework in Frameworks */,
 				2F1D12D5196A6EF00028187B /* UIKit.framework in Frameworks */,
-				2F1D130C196A71440028187B /* Parse.framework in Frameworks */,
 				2F1D12D1196A6EF00028187B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +132,7 @@
 		2F1D12C4196A6EF00028187B = {
 			isa = PBXGroup;
 			children = (
+				55646B29197CC53C0029E3CF /* Parse.framework */,
 				2F1D12D6196A6EF00028187B /* SnapSale */,
 				2F1D12F8196A6EF00028187B /* SnapSaleTests */,
 				2F1D12CF196A6EF00028187B /* Frameworks */,
@@ -154,7 +161,6 @@
 				2F1D1313196A720C0028187B /* Security.framework */,
 				2F1D1314196A720C0028187B /* StoreKit.framework */,
 				2F1D1315196A720C0028187B /* SystemConfiguration.framework */,
-				2F1D130B196A71440028187B /* Parse.framework */,
 				2F1D12D0196A6EF00028187B /* Foundation.framework */,
 				2F1D12D2196A6EF00028187B /* CoreGraphics.framework */,
 				2F1D12D4196A6EF00028187B /* UIKit.framework */,
@@ -225,8 +231,12 @@
 		2F1D1309196A6F440028187B /* Sell */ = {
 			isa = PBXGroup;
 			children = (
-				2F1D12E8196A6EF00028187B /* SecondViewController.h */,
-				2F1D12E9196A6EF00028187B /* SecondViewController.m */,
+				55646B1E197CC3DD0029E3CF /* FormViewController.h */,
+				55646B1F197CC3DD0029E3CF /* FormViewController.m */,
+				55646B20197CC3DD0029E3CF /* CameraViewController.h */,
+				55646B21197CC3DD0029E3CF /* CameraViewController.m */,
+				55646B22197CC3DD0029E3CF /* SubmitSuccessViewController.h */,
+				55646B23197CC3DD0029E3CF /* SubmitSuccessViewController.m */,
 			);
 			name = Sell;
 			sourceTree = "<group>";
@@ -339,11 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F1D12EA196A6EF00028187B /* SecondViewController.m in Sources */,
+				55646B24197CC3DD0029E3CF /* FormViewController.m in Sources */,
 				2F3A13671972698600231820 /* ListingView.m in Sources */,
 				2F1D12E1196A6EF00028187B /* AppDelegate.m in Sources */,
+				55646B26197CC3DD0029E3CF /* SubmitSuccessViewController.m in Sources */,
 				2F1D12DD196A6EF00028187B /* main.m in Sources */,
 				2F3A136A19726F3800231820 /* Postcell.m in Sources */,
+				55646B25197CC3DD0029E3CF /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +475,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/liyizhikou/Documents/SnapSale,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SnapSale/SnapSale-Prefix.pch";
@@ -480,6 +493,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/liyizhikou/Documents/SnapSale,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SnapSale/SnapSale-Prefix.pch";

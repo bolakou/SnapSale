@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FormViewController.h"
 
-@interface MyViewController : UIImagePickerController<UINavigationBarDelegate, UIImagePickerControllerDelegate> {
+@interface CameraViewController : UIViewController<UINavigationBarDelegate, UIImagePickerControllerDelegate> {
 }
 @end
 

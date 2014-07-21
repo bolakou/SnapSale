@@ -6,22 +6,23 @@
 //  Copyright (c) 2014 Sean Wang. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "CameraViewController.h"
 
-@implementation MyViewController
+@implementation CameraViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self setSourceType:UIImagePickerControllerSourceTypeCamera];
-    [self setAllowsEditing:NO];
-    [self setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto];
-    [self setDelegate: self];
-    // TODO difference between DidLoad and DidAppear
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    [imagePicker setAllowsEditing:NO];
+    [imagePicker setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto];
+    [imagePicker setDelegate: self];
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,9 +40,10 @@
     UIGraphicsEndImageContext();
     
     //[picker dismissViewControllerAnimated:YES completion:nil];
-    FormViewController *view = (FormViewController *)[[self storyboard] instantiateViewControllerWithIdentifier:@"nextview"];
+    FormViewController *view = (FormViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"nextview"];
     [view setImage:smallImage];
-    [self pushViewController:view animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController pushViewController:view animated:YES];
 }
 
 @end
