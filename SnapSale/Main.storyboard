@@ -1,13 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="O5a-ZY-i50">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="NH2-n8-Rfx">
+            <objects>
+                <navigationController id="O5a-ZY-i50" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4uP-Ks-9LY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vK6-q4-mmy" kind="relationship" relationship="rootViewController" id="STc-C4-2hP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5x-zQ-BOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-749" y="178"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="0or-hF-I59">
+            <objects>
+                <viewController id="vK6-q4-mmy" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Qn-ri-YXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tia-Vy-UeD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3hE-FU-auK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Check out your facebook profile by logging in with the button below!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vt2-0k-xuQ">
+                                <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                <color key="backgroundColor" red="0.90196084980000002" green="0.90196084980000002" blue="0.90196084980000002" alpha="0.0" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jnV-st-xLJ">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAr-85-yJm">
+                                <rect key="frame" x="80" y="343" width="159" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <inset key="contentEdgeInsets" minX="44" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Log In" backgroundImage="login-button-small.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" backgroundImage="login-button-small.png"/>
+                                <state key="selected" title="Login" backgroundImage="login-button-small-pressed.png"/>
+                                <state key="highlighted" backgroundImage="login-button-small-pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTouchHandler:" destination="vK6-q4-mmy" eventType="touchUpInside" id="Tkx-dU-AdU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="On9-9k-EVw"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="jnV-st-xLJ" id="GUG-bi-fz6"/>
+                        <segue destination="8YX-ce-x5E" kind="push" id="Ty1-Uq-nNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCr-0P-osE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="178"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="snl-LL-nbA"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -21,7 +90,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="108" y="178"/>
         </scene>
         <!--Item-->
         <scene sceneID="UYU-nl-PjP">
@@ -78,16 +147,6 @@
                                     <outlet property="delegate" destination="HoW-ke-Qj3" id="XlQ-Ua-jz7"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHV-WR-0fA">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Listing" id="Kgp-Kz-KY8">
-                                        <barButtonItem key="leftBarButtonItem" title="Fliter" id="vQs-Xh-JhR"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Map" id="U5X-Z5-psM"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -277,6 +336,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="login-button-small-pressed.png" width="151" height="43"/>
+        <image name="login-button-small.png" width="151" height="43"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface ListingView : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ListingView : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate, UIAlertViewDelegate>
 {
     IBOutlet UITableView *tableView;
     
@@ -20,5 +21,5 @@
     
 }
 
-
+- (void)logoutButtonTouchHandler:(id)sender;
 @end

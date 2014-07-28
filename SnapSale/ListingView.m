@@ -28,6 +28,34 @@
 {
     [super viewDidLoad];
     
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStyleBordered target:self action:@selector(logoutButtonTouchHandler:)];
+    self.tabBarController.navigationItem.leftBarButtonItem = logoutButton;
+    
+    if ([PFUser currentUser]) {
+        [self updateProfile];
+    }
+    
+    FBRequest *request = [FBRequest requestForMe];
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            NSDictionary *userData = (NSDictionary *)result;
+            
+            NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:1];
+            
+            if (userData[@"name"]) {
+                userProfile[@"name"] = userData[@"name"];
+            }
+            
+            [[PFUser currentUser] setObject:userProfile forKeyedSubscript:@"profile"];
+            [[PFUser currentUser] saveInBackground];
+            
+            [self updateProfile];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Fetching user info error" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Log In Again", nil];
+            [alert show];
+        }
+    }];
+    
     // Do any additional setup after loading the view.
     UserNameArr = [[NSArray alloc] initWithObjects:@"kou",@"sean" ,nil];
     UserAvatarArr = [[NSArray alloc] initWithObjects:@"avatar.png",@"avatar.png", nil];
@@ -38,6 +66,15 @@
     
 }
 
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self logoutButtonTouchHandler: nil];
+}
+
+- (void) logoutButtonTouchHandler: (id)sender {
+    [PFUser logOut];
+    
+    [self.tabBarController.navigationController popToRootViewControllerAnimated:YES];
+}
 
 //To Make Space Between Each Cell
 //Let table create a section to each
@@ -91,6 +128,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) updateProfile
+{
+    if([[PFUser currentUser] objectForKey:@"profile"][@"name"]) {
+        [self.tabBarController.navigationItem setTitle:[[PFUser currentUser] objectForKey:@"profile"][@"name"]];
+    }
 }
 
 /*

@@ -39,6 +39,12 @@
 		55646B25197CC3DD0029E3CF /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55646B21197CC3DD0029E3CF /* CameraViewController.m */; };
 		55646B26197CC3DD0029E3CF /* SubmitSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55646B23197CC3DD0029E3CF /* SubmitSuccessViewController.m */; };
 		55646B2A197CC53C0029E3CF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55646B29197CC53C0029E3CF /* Parse.framework */; };
+		55D36EB81986292100EBDE75 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D36EB71986292100EBDE75 /* LoginViewController.m */; };
+		55D36EBA1986294700EBDE75 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D36EB91986294700EBDE75 /* FacebookSDK.framework */; };
+		55D36EBF19862C4100EBDE75 /* login-button-small-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D36EBB19862C4100EBDE75 /* login-button-small-pressed.png */; };
+		55D36EC019862C4100EBDE75 /* login-button-small-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D36EBC19862C4100EBDE75 /* login-button-small-pressed@2x.png */; };
+		55D36EC119862C4100EBDE75 /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D36EBD19862C4100EBDE75 /* login-button-small.png */; };
+		55D36EC219862C4100EBDE75 /* login-button-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D36EBE19862C4100EBDE75 /* login-button-small@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +99,13 @@
 		55646B22197CC3DD0029E3CF /* SubmitSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitSuccessViewController.h; sourceTree = "<group>"; };
 		55646B23197CC3DD0029E3CF /* SubmitSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitSuccessViewController.m; sourceTree = "<group>"; };
 		55646B29197CC53C0029E3CF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		55D36EB61986292100EBDE75 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		55D36EB71986292100EBDE75 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		55D36EB91986294700EBDE75 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		55D36EBB19862C4100EBDE75 /* login-button-small-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small-pressed.png"; sourceTree = "<group>"; };
+		55D36EBC19862C4100EBDE75 /* login-button-small-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small-pressed@2x.png"; sourceTree = "<group>"; };
+		55D36EBD19862C4100EBDE75 /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small.png"; sourceTree = "<group>"; };
+		55D36EBE19862C4100EBDE75 /* login-button-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +126,7 @@
 				2F1D12D3196A6EF00028187B /* CoreGraphics.framework in Frameworks */,
 				2F1D12D5196A6EF00028187B /* UIKit.framework in Frameworks */,
 				2F1D12D1196A6EF00028187B /* Foundation.framework in Frameworks */,
+				55D36EBA1986294700EBDE75 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +166,7 @@
 		2F1D12CF196A6EF00028187B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55D36EB91986294700EBDE75 /* FacebookSDK.framework */,
 				2F1D130D196A720C0028187B /* AudioToolbox.framework */,
 				2F1D130E196A720C0028187B /* CFNetwork.framework */,
 				2F1D130F196A720C0028187B /* CoreLocation.framework */,
@@ -180,6 +195,8 @@
 				2F1D12E0196A6EF00028187B /* AppDelegate.m */,
 				2F1D12EB196A6EF00028187B /* Images.xcassets */,
 				2F1D12D7196A6EF00028187B /* Supporting Files */,
+				55D36EB61986292100EBDE75 /* LoginViewController.h */,
+				55D36EB71986292100EBDE75 /* LoginViewController.m */,
 			);
 			path = SnapSale;
 			sourceTree = "<group>";
@@ -188,6 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				2F1D12D8196A6EF00028187B /* SnapSale-Info.plist */,
+				55D36EBB19862C4100EBDE75 /* login-button-small-pressed.png */,
+				55D36EBC19862C4100EBDE75 /* login-button-small-pressed@2x.png */,
+				55D36EBD19862C4100EBDE75 /* login-button-small.png */,
+				55D36EBE19862C4100EBDE75 /* login-button-small@2x.png */,
 				2F1D12D9196A6EF00028187B /* InfoPlist.strings */,
 				2F1D12DC196A6EF00028187B /* main.m */,
 				2F1D12DE196A6EF00028187B /* SnapSale-Prefix.pch */,
@@ -328,9 +349,13 @@
 				2FB3ABFC19724CF600420CE1 /* p1.jpg in Resources */,
 				2FB3ABFD19724CF600420CE1 /* avatar.png in Resources */,
 				2FB3ABFB19724CF600420CE1 /* p2.png in Resources */,
+				55D36EBF19862C4100EBDE75 /* login-button-small-pressed.png in Resources */,
 				2FB3ABFA19724CF600420CE1 /* p3.jpg in Resources */,
 				2F1D12EC196A6EF00028187B /* Images.xcassets in Resources */,
+				55D36EC019862C4100EBDE75 /* login-button-small-pressed@2x.png in Resources */,
+				55D36EC219862C4100EBDE75 /* login-button-small@2x.png in Resources */,
 				2F1D12DB196A6EF00028187B /* InfoPlist.strings in Resources */,
+				55D36EC119862C4100EBDE75 /* login-button-small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D36EB81986292100EBDE75 /* LoginViewController.m in Sources */,
 				55646B24197CC3DD0029E3CF /* FormViewController.m in Sources */,
 				2F3A13671972698600231820 /* ListingView.m in Sources */,
 				2F1D12E1196A6EF00028187B /* AppDelegate.m in Sources */,
