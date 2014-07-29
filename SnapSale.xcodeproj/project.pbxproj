@@ -28,9 +28,9 @@
 		2F1D131C196A720C0028187B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D1313196A720C0028187B /* Security.framework */; };
 		2F1D131D196A720C0028187B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D1314196A720C0028187B /* StoreKit.framework */; };
 		2F1D131E196A720C0028187B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D1315196A720C0028187B /* SystemConfiguration.framework */; };
+		2F245AFC198748C800F6922E /* ListingAround.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F245AF9198748C800F6922E /* ListingAround.m */; };
+		2F245AFD198748C800F6922E /* ListingAroundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F245AFB198748C800F6922E /* ListingAroundCell.m */; };
 		2F3A13641972661700231820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3A13631972661700231820 /* Main.storyboard */; };
-		2F3A13671972698600231820 /* ListingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A13661972698600231820 /* ListingView.m */; };
-		2F3A136A19726F3800231820 /* Postcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A136919726F3800231820 /* Postcell.m */; };
 		2FB3ABFA19724CF600420CE1 /* p3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB3ABF619724CF600420CE1 /* p3.jpg */; };
 		2FB3ABFB19724CF600420CE1 /* p2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB3ABF719724CF600420CE1 /* p2.png */; };
 		2FB3ABFC19724CF600420CE1 /* p1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB3ABF819724CF600420CE1 /* p1.jpg */; };
@@ -83,11 +83,11 @@
 		2F1D1313196A720C0028187B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2F1D1314196A720C0028187B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2F1D1315196A720C0028187B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2F245AF8198748C800F6922E /* ListingAround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingAround.h; sourceTree = "<group>"; };
+		2F245AF9198748C800F6922E /* ListingAround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingAround.m; sourceTree = "<group>"; };
+		2F245AFA198748C800F6922E /* ListingAroundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingAroundCell.h; sourceTree = "<group>"; };
+		2F245AFB198748C800F6922E /* ListingAroundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingAroundCell.m; sourceTree = "<group>"; };
 		2F3A13631972661700231820 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2F3A13651972698600231820 /* ListingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingView.h; sourceTree = "<group>"; };
-		2F3A13661972698600231820 /* ListingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingView.m; sourceTree = "<group>"; };
-		2F3A136819726F3700231820 /* Postcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postcell.h; sourceTree = "<group>"; };
-		2F3A136919726F3800231820 /* Postcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postcell.m; sourceTree = "<group>"; };
 		2FB3ABF619724CF600420CE1 /* p3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p3.jpg; sourceTree = "<group>"; };
 		2FB3ABF719724CF600420CE1 /* p2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p2.png; sourceTree = "<group>"; };
 		2FB3ABF819724CF600420CE1 /* p1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p1.jpg; sourceTree = "<group>"; };
@@ -241,10 +241,10 @@
 				2FB3ABF719724CF600420CE1 /* p2.png */,
 				2FB3ABF819724CF600420CE1 /* p1.jpg */,
 				2FB3ABF919724CF600420CE1 /* avatar.png */,
-				2F3A13651972698600231820 /* ListingView.h */,
-				2F3A13661972698600231820 /* ListingView.m */,
-				2F3A136819726F3700231820 /* Postcell.h */,
-				2F3A136919726F3800231820 /* Postcell.m */,
+				2F245AF8198748C800F6922E /* ListingAround.h */,
+				2F245AF9198748C800F6922E /* ListingAround.m */,
+				2F245AFA198748C800F6922E /* ListingAroundCell.h */,
+				2F245AFB198748C800F6922E /* ListingAroundCell.m */,
 			);
 			name = Listing;
 			sourceTree = "<group>";
@@ -375,12 +375,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D36EB81986292100EBDE75 /* LoginViewController.m in Sources */,
+				2F245AFD198748C800F6922E /* ListingAroundCell.m in Sources */,
 				55646B24197CC3DD0029E3CF /* FormViewController.m in Sources */,
-				2F3A13671972698600231820 /* ListingView.m in Sources */,
 				2F1D12E1196A6EF00028187B /* AppDelegate.m in Sources */,
 				55646B26197CC3DD0029E3CF /* SubmitSuccessViewController.m in Sources */,
 				2F1D12DD196A6EF00028187B /* main.m in Sources */,
-				2F3A136A19726F3800231820 /* Postcell.m in Sources */,
+				2F245AFC198748C800F6922E /* ListingAround.m in Sources */,
 				55646B25197CC3DD0029E3CF /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,14 +1,14 @@
 //
-//  Postcell.m
+//  ListingAroundCell.m
 //  SnapSale
 //
-//  Created by liyizhi kou on 14-7-13.
+//  Created by liyizhi kou on 14-7-26.
 //  Copyright (c) 2014年 WJK Studio. All rights reserved.
 //
 
-#import "Postcell.h"
+#import "ListingAroundCell.h"
 
-@implementation Postcell
+@implementation ListingAroundCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -16,6 +16,8 @@
     if (self) {
         // Initialization code
     }
+    
+
     return self;
 }
 
@@ -30,5 +32,6 @@
 
     // Configure the view for the selected state
 }
+
 
 @end
