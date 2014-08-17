@@ -13,16 +13,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
-    [imagePicker setAllowsEditing:NO];
-    [imagePicker setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto];
-    [imagePicker setDelegate: self];
-    [self presentViewController:imagePicker animated:YES completion:nil];
+    imagePicker = [[UIImagePickerController alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,8 +33,19 @@
     //[picker dismissViewControllerAnimated:YES completion:nil];
     FormViewController *view = (FormViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"nextview"];
     [view setImage:smallImage];
+    [imagePicker pushViewController:view animated:YES];
+}
+
+- (void) onSellFinished {
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self.navigationController pushViewController:view animated:YES];
+}
+
+- (IBAction)onSellButtonClicked {
+    [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    [imagePicker setAllowsEditing:NO];
+    [imagePicker setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto];
+    [imagePicker setDelegate: self];
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
 @end

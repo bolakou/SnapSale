@@ -10,6 +10,9 @@
 #import "FormViewController.h"
 
 @interface CameraViewController : UIViewController<UINavigationBarDelegate, UIImagePickerControllerDelegate> {
+    UIImagePickerController *imagePicker;
 }
+
+- (void) onSellFinished;
 @end
 

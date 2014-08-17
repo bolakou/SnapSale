@@ -46,4 +46,9 @@
 }
 */
 
+- (IBAction)onOkayClicked:(id)sender {
+    CameraViewController *base = self.navigationController.delegate;
+    [base onSellFinished];
+}
+
 @end

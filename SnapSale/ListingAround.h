@@ -10,5 +10,4 @@
 
 @interface ListingAround : PFQueryTableViewController
 
-
 @end

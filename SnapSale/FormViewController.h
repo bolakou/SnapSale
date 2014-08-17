@@ -10,8 +10,13 @@
 #import <Parse/Parse.h>
 #import "SubmitSuccessViewController.h"
 
-@interface FormViewController : UIViewController<UITextFieldDelegate>
+@interface FormViewController : UIViewController<UITextFieldDelegate, CLLocationManagerDelegate> {
+    CLLocation *location;
+    CLLocationManager *locationManager;
+    UITextField *activeField;
+}
 
+@property IBOutlet UIScrollView *scrollView;
 @property IBOutlet UIImageView *imageView;
 @property IBOutlet UITextField *titleField;
 @property IBOutlet UITextField *priceField;
