@@ -13,6 +13,9 @@
 @interface ListingAroundCell : PFTableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *P_Title;
 @property (strong, nonatomic) IBOutlet PFImageView *CoverImage;
-
+@property (strong, nonatomic) IBOutlet UILabel *P_Time;
+@property (strong, nonatomic) IBOutlet PFImageView *User_Avatar;
+@property (strong, nonatomic) IBOutlet UILabel *User_Name;
+@property (strong, nonatomic) IBOutlet UILabel *P_Location;
 
 @end

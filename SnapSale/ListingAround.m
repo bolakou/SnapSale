@@ -8,6 +8,9 @@
 
 #import "ListingAround.h"
 #import "ListingAroundCell.h"
+#import "NSDate+NVTimeAgo.h"
+#import "ScrollView.h"
+
 
 
 @implementation ListingAround
@@ -23,19 +26,19 @@
         self.parseClassName = @"Item";
         
         // The key of the PFObject to display in the label of the default cell style
-       // self.textKey = @"text";
+        // self.textKey = @"text";
         
         // The title for this table in the Navigation Controller.
-       // self.title = @"Todos";
+        // self.title = @"Todos";
         
         // Whether the built-in pull-to-refresh is enabled
         self.pullToRefreshEnabled = YES;
         
         // Whether the built-in pagination is enabled
-      //  self.paginationEnabled = YES;
+        //  self.paginationEnabled = YES;
         
         // The number of objects to show per page
-       // self.objectsPerPage = 2;
+        // self.objectsPerPage = 2;
     }
     return self;
 }
@@ -50,7 +53,8 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)viewDidUnload
@@ -127,9 +131,6 @@
 
 
 
-// Override to customize the look of a cell representing an object. The default is to display
-// a UITableViewCellStyleDefault style cell with the label being the first key in the object.
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     static NSString *CellIdentifier = @"Cell";
@@ -138,16 +139,49 @@
     if (cell == nil) {
         cell = [[ListingAroundCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
+    self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.backgroundColor = [UIColor colorWithRed:230.0f/255.0f green:230.0f/255.0f  blue:230.0f/255.0f  alpha:1];
+    ////////////////////////
+    // Configure the cell //
+    ////////////////////////
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cellbg.png"] ];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    //    cell.selectedBackgroundView =  [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"cell_pressed.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ];
+    //cell.backgroundColor = [UIColor redColor];
     
-    // Configure the cell
+    
+    
+    //Get Post Title from Parse
     cell.P_Title.text = [object objectForKey:@"title"];
     
-
-    cell.CoverImage.file = (PFFile *)[object objectForKey:@"image"];
-   [cell.CoverImage loadInBackground];
+    //Get Post Date from Parse
+    NSDate *p_date = [NSDate date];
+    p_date = object.createdAt;
+    cell.P_Time.text = [p_date formattedAsTimeAgo];
     
-
+    
+    //Get Cover Image
+    cell.CoverImage.file = (PFFile *)[object objectForKey:@"image"];
+    [cell.CoverImage loadInBackground];
+    
+    
     return cell;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Check that a new transition has been requested to the DetailViewController and prepares for it
+    if ([segue.identifier isEqualToString:@"postdetail"]){
+        
+        // Capture the object (e.g. exam) the user has selected from the list
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PFObject *object = [self.objects objectAtIndex:indexPath.row];
+        
+        // Set destination view controller to DetailViewController to avoid the NavigationViewController in the middle (if you have it embedded into a navigation controller, if not ignore that part)
+        ScrollView *nav = [segue destinationViewController];
+        nav.Post = object;
+    }
 }
 
 
